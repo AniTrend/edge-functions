@@ -1,5 +1,5 @@
 import { Document } from 'npm/mongodb';
-import { MediaWithSeason } from '../types.d.ts';
+import { MediaWithSeason } from '../types.ts';
 
 export interface MediaDocument extends Document, MediaWithSeason {
 }

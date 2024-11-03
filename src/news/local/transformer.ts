@@ -1,6 +1,6 @@
 import { Document } from 'npm/mongodb';
-import { Transform } from '../../common/transformer/types.d.ts';
-import { News } from '../types.d.ts';
+import { Transform } from '../../common/transformer/types.ts';
+import { News } from '../types.ts';
 
 export const transform: Transform<Document, News> = (
   sourceData,

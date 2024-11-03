@@ -1,14 +1,14 @@
 import { toInstant } from '../../common/helpers/date.ts';
 import { provider } from '../service/tmdb/transformer/index.ts';
-import { TmdbCrew, TmdbImage } from '../service/tmdb/types.d.ts';
+import { TmdbCrew, TmdbImage } from '../service/tmdb/types.ts';
 import { ImageProviderType } from '../service/tmdb/utils/image-provider.ts';
 import {
   SeriesEpisode,
   SeriesEpisodeCrew,
   SeriesImageBackdrop,
   SeriesSeason,
-} from '../types.d.ts';
-import { MergedEpisode, MergedSeason } from './types.d.ts';
+} from '../types.ts';
+import { MergedEpisode, MergedSeason } from './types.ts';
 
 const transformImage = (
   images: TmdbImage[],

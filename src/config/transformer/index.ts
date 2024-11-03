@@ -3,11 +3,11 @@ import {
   getPlatformSource,
   isAnalyticsEnabled,
 } from '../../common/experiment/index.ts';
-import { Transform } from '../../common/transformer/types.d.ts';
-import { Features } from '../../common/types/core.d.ts';
-import { ConfigDocument } from '../local/types.d.ts';
-import { ClientConfiguration } from './types.d.ts';
-import { PlatformSource } from '../../common/experiment/types.d.ts';
+import { Transform } from '../../common/transformer/types.ts';
+import { Features } from '../../common/types/core.ts';
+import { ConfigDocument } from '../local/types.ts';
+import { ClientConfiguration } from './types.ts';
+import { PlatformSource } from '../../common/experiment/types.ts';
 import { idOf } from '../../common/mongo/index.ts';
 
 const toImageUrl = (image: string, source?: PlatformSource): string => {

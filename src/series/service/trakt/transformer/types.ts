@@ -1,4 +1,4 @@
-import { Instant } from '../../../../common/helpers/date.d.ts';
+import { Instant } from '../../../../common/helpers/date.ts';
 
 interface MediaId {
   trakt: number;

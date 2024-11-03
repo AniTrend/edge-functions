@@ -1,13 +1,13 @@
-import { News } from '../types.d.ts';
+import { News } from '../types.ts';
 import { latestNews } from '../service/index.ts';
 import LocalSource from '../local/source.ts';
-import { IPaging } from '../../common/types/paging.d.ts';
+import { IPaging } from '../../common/types/paging.ts';
 import { transform } from '../transformer.ts';
 import { currentDate, isOlderThan } from '../../common/core/utils.ts';
-import { IResponse } from '../../common/types/response.d.ts';
+import { IResponse } from '../../common/types/response.ts';
 import { parse } from 'x/xml';
 import { logger } from '../../common/core/logger.ts';
-import { NewsId } from '../local/types.d.ts';
+import { NewsId } from '../local/types.ts';
 import { between } from 'x/optic/profiler';
 
 export default class NewsRepository {

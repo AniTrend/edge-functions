@@ -1,4 +1,4 @@
-import { IResponse } from '../../common/types/response.d.ts';
+import { IResponse } from '../../common/types/response.ts';
 import {
   getAniListRelationId,
   getRelationsByTvdb,
@@ -10,17 +10,17 @@ import { getThemesForAnime } from '../service/theme/index.ts';
 import { getTmdbShow } from '../service/tmdb/index.ts';
 import { getTraktShow } from '../service/trakt/index.ts';
 import { seriesTransform } from '../transformer/series.ts';
-import { MediaWithSeason } from '../types.d.ts';
+import { MediaWithSeason } from '../types.ts';
 import { isManga } from '../utils/index.ts';
 import LocalSource from '../local/source.ts';
 import SeasonRepository from './season.ts';
 import { seasonTransformer } from '../transformer/season.ts';
-import { Theme } from '../service/theme/transformer/types.d.ts';
-import { SkyhookShow } from '../service/skyhook/types.d.ts';
-import { Show } from '../service/trakt/transformer/types.d.ts';
-import { TmdbShow } from '../service/tmdb/types.d.ts';
-import { AnimeRelationId } from '../service/arm/types.d.ts';
-import { MergedSeason } from '../transformer/types.d.ts';
+import { Theme } from '../service/theme/transformer/types.ts';
+import { SkyhookShow } from '../service/skyhook/types.ts';
+import { Show } from '../service/trakt/transformer/types.ts';
+import { TmdbShow } from '../service/tmdb/types.ts';
+import { AnimeRelationId } from '../service/arm/types.ts';
+import { MergedSeason } from '../transformer/types.ts';
 import { currentDate, isOlderThan } from '../../common/core/utils.ts';
 import { MediaParamId } from '../local/index.ts';
 

@@ -1,4 +1,10 @@
-import { FuzzyDate, Instant } from './date.d.ts';
+export interface FuzzyDate {
+  year: number;
+  month: number;
+  day: number;
+}
+
+export type Instant = number;
 
 export const toFuzzyDate = (date?: string | Date): FuzzyDate => {
   if (!date) {

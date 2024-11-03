@@ -1,4 +1,4 @@
-import { AnimeResource, MangaResource } from './remote/types.d.ts';
+import { AnimeResource, MangaResource } from './remote/types.ts';
 
 export type JikanAnime = AnimeResource;
 

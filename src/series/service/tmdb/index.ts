@@ -1,7 +1,7 @@
 import { logger } from '../../../common/core/logger.ts';
 import { transform } from './transformer/index.ts';
 import { getSeasonBy, getShowById } from './remote/index.ts';
-import { TmdbSeason, TmdbShow } from './types.d.ts';
+import { TmdbSeason, TmdbShow } from './types.ts';
 
 export const getTmdbShow = async (
   tmdb?: number | null,

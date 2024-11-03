@@ -1,4 +1,4 @@
-import { AppContext, ErrorResponse } from '../common/types/core.d.ts';
+import { AppContext, ErrorResponse } from '../common/types/core.ts';
 import { Repository } from './repository/index.ts';
 import { LocalSource } from './local/index.ts';
 import { collection } from '../common/mongo/index.ts';

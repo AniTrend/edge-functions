@@ -1,12 +1,12 @@
 import { toInstant } from '../../../../common/helpers/index.ts';
-import { Transform } from '../../../../common/transformer/types.d.ts';
+import { Transform } from '../../../../common/transformer/types.ts';
 import {
   AnimeModel,
   ImageModel,
   MappingModel,
   TrailerModel,
-} from '../remote/types.d.ts';
-import { Anime, MediaId, Poster, Trailer } from './types.d.ts';
+} from '../remote/types.ts';
+import { Anime, MediaId, Poster, Trailer } from './types.ts';
 import { Format, Source, Status } from './enums.ts';
 
 const mapMediaId = (input: MappingModel[]): MediaId => {

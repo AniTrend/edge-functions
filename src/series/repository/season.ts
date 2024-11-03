@@ -2,11 +2,11 @@ import { zip } from 'std/collections';
 import { deepmerge } from 'deepmerge';
 import { getTmdbSeason } from '../service/tmdb/index.ts';
 import { isMovie } from '../utils/index.ts';
-import { NotifyAnime } from '../service/notify/types.d.ts';
-import { SkyhookEpisode, SkyhookShow } from '../service/skyhook/types.d.ts';
-import { TmdbEpisode, TmdbSeason, TmdbShow } from '../service/tmdb/types.d.ts';
-import { MergedEpisode, MergedSeason } from '../transformer/types.d.ts';
-import { AnimeRelationId } from '../service/arm/types.d.ts';
+import { NotifyAnime } from '../service/notify/types.ts';
+import { SkyhookEpisode, SkyhookShow } from '../service/skyhook/types.ts';
+import { TmdbEpisode, TmdbSeason, TmdbShow } from '../service/tmdb/types.ts';
+import { MergedEpisode, MergedSeason } from '../transformer/types.ts';
+import { AnimeRelationId } from '../service/arm/types.ts';
 
 export default class SeasonRepository {
   constructor() {}

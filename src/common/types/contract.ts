@@ -1,5 +1,5 @@
-import { Features } from './core.d.ts';
-import { Service } from './state.d.ts';
+import { Features } from './core.ts';
+import { Service } from './state.ts';
 
 type Config = {
   service: Service;

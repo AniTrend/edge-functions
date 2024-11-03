@@ -1,7 +1,7 @@
 import { logger } from '../../../common/core/logger.ts';
 import { transform } from './transformer/index.ts';
 import { getByAnilist, getByTvdb } from './remote/index.ts';
-import { AnimeRelationId } from './types.d.ts';
+import { AnimeRelationId } from './types.ts';
 
 export const getAniListRelationId = async (
   anilist?: number,

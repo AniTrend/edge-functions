@@ -1,8 +1,8 @@
 import { between } from 'x/optic';
-import { State } from '../types/state.d.ts';
+import { State } from '../types/state.ts';
 import { UserAgent } from 'std/http';
 import { logger } from '../core/logger.ts';
-import type { AppContext } from '../types/core.d.ts';
+import type { AppContext } from '../types/core.ts';
 
 const contextAttributes = (
   { contextHeader }: State,

@@ -2,7 +2,7 @@ import { MongoClient } from 'npm/mongodb';
 import { logger } from '../core/logger.ts';
 import { between } from 'x/optic';
 import { env } from '../core/env.ts';
-import { Local } from '../types/core.d.ts';
+import { Local } from '../types/core.ts';
 
 class LocalSourceFactory {
   constructor(private readonly client: MongoClient) {

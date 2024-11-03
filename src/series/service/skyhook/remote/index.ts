@@ -1,7 +1,7 @@
 import { env } from '../../../../common/core/env.ts';
 import { request } from '../../../../common/core/request.ts';
-import { Service } from '../../../../common/types/state.d.ts';
-import { SkyhookModel } from './types.d.ts';
+import { Service } from '../../../../common/types/state.ts';
+import { SkyhookModel } from './types.ts';
 
 const getService = (): Service => ({
   url: env<string>('SKYHOOK'),

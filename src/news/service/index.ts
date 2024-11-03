@@ -1,5 +1,5 @@
 import { defaults, request } from '../../common/core/request.ts';
-import { Service } from '../../common/types/state.d.ts';
+import { Service } from '../../common/types/state.ts';
 import { env } from '../../common/core/env.ts';
 
 const getService = (): Service => ({

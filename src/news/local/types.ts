@@ -1,5 +1,5 @@
 import { Document } from 'npm/mongodb';
-import { EntityCursor } from '../../common/mongo/types.d.ts';
+import { EntityCursor } from '../../common/mongo/types.ts';
 
 export interface NewsDocument extends Document {
   slug: string;

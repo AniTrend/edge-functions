@@ -1,10 +1,10 @@
 import { Collection, Filter, FindOptions, ObjectId, WithId } from 'npm/mongodb';
 import { logger } from '../../common/core/logger.ts';
-import { IPaging } from '../../common/types/paging.d.ts';
-import { IResponse } from '../../common/types/response.d.ts';
+import { IPaging } from '../../common/types/paging.ts';
+import { IResponse } from '../../common/types/response.ts';
 import { toDocument, toEntity } from '../mapper.ts';
-import { News } from '../types.d.ts';
-import { NewsDocument, NewsId } from './types.d.ts';
+import { News } from '../types.ts';
+import { NewsDocument, NewsId } from './types.ts';
 import { between } from 'x/optic/profiler';
 import { projectionOf, sortOf } from '../../common/mongo/index.ts';
 

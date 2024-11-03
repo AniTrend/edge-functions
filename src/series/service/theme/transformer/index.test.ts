@@ -1,8 +1,8 @@
 import { assertEquals } from 'std/testing/asserts';
 import { describe, it } from 'std/testing/bdd';
-import { ThemeModel } from '../remote/types.d.ts';
+import { ThemeModel } from '../remote/types.ts';
 import { transform } from './index.ts';
-import { Theme } from './types.d.ts';
+import { Theme } from './types.ts';
 import { env } from '../../../../common/core/env.ts';
 
 describe('theme transformer test', () => {

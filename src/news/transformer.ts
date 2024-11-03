@@ -1,6 +1,6 @@
 import { logger } from '../common/core/logger.ts';
 import { toEpotch } from '../common/core/utils.ts';
-import { News } from './types.d.ts';
+import { News } from './types.ts';
 
 const sanitize = (content: string): string => {
   const regex = /<br\s*\/?>|<img.*?\/?>/g;

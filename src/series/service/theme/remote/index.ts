@@ -1,8 +1,8 @@
 import { env } from '../../../../common/core/env.ts';
 import { logger } from '../../../../common/core/logger.ts';
 import { request } from '../../../../common/core/request.ts';
-import { Service } from '../../../../common/types/state.d.ts';
-import { ThemeModel } from './types.d.ts';
+import { Service } from '../../../../common/types/state.ts';
+import { ThemeModel } from './types.ts';
 
 const getService = (): Service => ({
   url: env<string>('THEMES'),

@@ -1,4 +1,4 @@
-import { ThemeType } from './transformer/types.d.ts';
+import { ThemeType } from './transformer/types.ts';
 
 export type AnimeTheme = {
   id: string;

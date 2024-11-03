@@ -1,5 +1,5 @@
-import { Instant } from '../../common/helpers/date.d.ts';
-import { TmdbCrew, TmdbImages } from '../service/tmdb/types.d.ts';
+import { Instant } from '../../common/helpers/date.ts';
+import { TmdbCrew, TmdbImages } from '../service/tmdb/types.ts';
 
 export type MergedEpisode = {
   air_date: string;

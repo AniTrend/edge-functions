@@ -1,6 +1,6 @@
 import { State } from '../types/state.d.ts';
 import { env } from './env.ts';
-import { GrowthBook } from 'esm/growthbook';
+import { GrowthBook } from 'growthbook';
 import { logger } from './logger.ts';
 import { between } from 'x/optic';
 import _localSourceFactory from '../mongo/factory.ts';

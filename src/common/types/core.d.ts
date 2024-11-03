@@ -1,6 +1,6 @@
 import { Context } from 'x/oak';
 import { State } from './state.d.ts';
-import { GrowthBook } from 'esm/growthbook';
+import { GrowthBook } from 'growthbook';
 import { Db } from 'npm/mongodb';
 import { AppFeatures } from '../experiment/types.d.ts';
 

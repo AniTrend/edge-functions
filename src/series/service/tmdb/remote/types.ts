@@ -1,4 +1,4 @@
-import { RCF822Date } from '../../../../common/types/core.d.ts';
+import { RCF822Date } from '../../../../common/types/core.ts';
 
 interface Genre {
   id: number;
@@ -50,7 +50,7 @@ interface SpokenLanguage {
   name: string;
 }
 
-interface Image {
+export interface Image {
   aspect_ratio: number;
   height: number;
   iso_639_1: null | string;

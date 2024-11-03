@@ -1,4 +1,4 @@
-import { IResponse } from './response.d.ts';
+import { IResponse } from './response.ts';
 
 export interface IPaging<T> extends IResponse<T[]> {
   first?: string;

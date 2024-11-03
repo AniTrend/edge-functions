@@ -1,7 +1,7 @@
 import { isHttpError, Status, STATUS_TEXT } from 'x/oak';
 import { logger } from '../core/logger.ts';
-import type { ErrorResponse } from '../types/core.d.ts';
-import type { AppContext } from '../types/core.d.ts';
+import type { ErrorResponse } from '../types/core.ts';
+import type { AppContext } from '../types/core.ts';
 
 export default async (
   { response }: AppContext,

@@ -1,7 +1,7 @@
 import { logger } from '../../../common/core/logger.ts';
 import { transform } from './transformer/index.ts';
 import { getTraktShowByIdOrSlug } from './remote/index.ts';
-import { TraktShow } from './types.d.ts';
+import { TraktShow } from './types.ts';
 
 export const getTraktShow = async (
   trakt?: number | string,

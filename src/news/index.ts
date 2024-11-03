@@ -1,4 +1,4 @@
-import type { AppContext } from '../common/types/core.d.ts';
+import type { AppContext } from '../common/types/core.ts';
 import { isNewsApiv2Enabled } from '../common/experiment/index.ts';
 import NewsRepository, {} from './repository/index.ts';
 import LocalSource from './local/source.ts';

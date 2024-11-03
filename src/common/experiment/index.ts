@@ -1,7 +1,7 @@
-import { Features } from '../types/core.d.ts';
+import { Features } from '../types/core.ts';
 import { logger } from '../core/logger.ts';
 import { between } from 'x/optic';
-import { PlatformSource } from './types.d.ts';
+import { PlatformSource } from './types.ts';
 
 const invoke = <T>(action: () => T): T => {
   logger.mark('experiment-check-start');

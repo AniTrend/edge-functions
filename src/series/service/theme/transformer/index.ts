@@ -1,7 +1,7 @@
 import { env } from '../../../../common/core/env.ts';
-import { Transform } from '../../../../common/transformer/types.d.ts';
-import { ThemeMetaModel, ThemeModel } from '../remote/types.d.ts';
-import { Theme, ThemeType } from './types.d.ts';
+import { Transform } from '../../../../common/transformer/types.ts';
+import { ThemeMetaModel, ThemeModel } from '../remote/types.ts';
+import { Theme, ThemeType } from './types.ts';
 
 const themeMetaData = (theme: ThemeMetaModel) => {
   const parts = theme.themeType.match(/(OP|ED)(\d+)?( V(\d+))?/);

@@ -1,6 +1,6 @@
-import { Transform } from '../../../../common/transformer/types.d.ts';
-import { ShowModel } from '../remote/types.d.ts';
-import { Show } from './types.d.ts';
+import { Transform } from '../../../../common/transformer/types.ts';
+import { ShowModel } from '../remote/types.ts';
+import { Show } from './types.ts';
 import { toInstant } from '../../../../common/helpers/date.ts';
 
 export const transform: Transform<ShowModel, Show> = (

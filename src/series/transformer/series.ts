@@ -1,17 +1,17 @@
 import { currentDate, toEpotch } from '../../common/core/utils.ts';
 import { toInstant } from '../../common/helpers/date.ts';
-import { AnimeRelationId } from '../service/arm/types.d.ts';
-import { Jikan } from '../service/jikan/types.d.ts';
-import { NotifyAnime } from '../service/notify/types.d.ts';
-import { SkyhookShow } from '../service/skyhook/types.d.ts';
-import { AnimeTheme } from '../service/theme/types.d.ts';
-import { Images } from '../service/tmdb/remote/types.d.ts';
+import { AnimeRelationId } from '../service/arm/types.ts';
+import { Jikan } from '../service/jikan/types.ts';
+import { NotifyAnime } from '../service/notify/types.ts';
+import { SkyhookShow } from '../service/skyhook/types.ts';
+import { AnimeTheme } from '../service/theme/types.ts';
+import { Images } from '../service/tmdb/remote/types.ts';
 import {
   TmdbEpisodeToAir,
   TmdbNetwork,
   TmdbShow,
-} from '../service/tmdb/types.d.ts';
-import { TraktShow } from '../service/trakt/types.d.ts';
+} from '../service/tmdb/types.ts';
+import { TraktShow } from '../service/trakt/types.ts';
 import {
   Media,
   NetworkCategory,
@@ -23,7 +23,7 @@ import {
   SeriesScheduleEpisode,
   SeriesTitle,
   SeriesTrailer,
-} from '../types.d.ts';
+} from '../types.ts';
 
 const seriesId = (
   relation?: AnimeRelationId,

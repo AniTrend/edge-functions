@@ -1,7 +1,7 @@
 import { assertEquals } from 'std/testing/asserts';
 import { describe, it } from 'std/testing/bdd';
 import { ImageProvider, ImageProviderType } from './image-provider.ts';
-import { Image } from '../remote/types.d.ts';
+import { Image } from '../remote/types.ts';
 
 describe('ImageProvider', () => {
   const provider = new ImageProvider(

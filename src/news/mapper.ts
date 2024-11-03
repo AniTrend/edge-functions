@@ -1,5 +1,5 @@
-import { News, NewsEntity } from './types.d.ts';
-import { NewsDocument } from './local/types.d.ts';
+import { News, NewsEntity } from './types.ts';
+import { NewsDocument } from './local/types.ts';
 import { OptionalId, WithId } from 'npm/mongodb';
 import { idOf } from '../common/mongo/index.ts';
 

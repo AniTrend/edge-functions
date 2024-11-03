@@ -1,7 +1,7 @@
 import { Router } from 'x/oak';
 import factory from './common/core/factory.ts';
 import { port } from './common/core/utils.ts';
-import { AppContext } from './common/types/core.d.ts';
+import { AppContext } from './common/types/core.ts';
 import { config } from './config/index.ts';
 import { news, newsWorker } from './news/index.ts';
 import { series } from './series/index.ts';

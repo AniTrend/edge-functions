@@ -1,7 +1,7 @@
 import { logger } from '../../../common/core/logger.ts';
 import { transform } from './transformer/index.ts';
 import { getThemesByMalId } from './remote/index.ts';
-import { AnimeTheme } from './types.d.ts';
+import { AnimeTheme } from './types.ts';
 
 export const getThemesForAnime = async (
   mal?: number,

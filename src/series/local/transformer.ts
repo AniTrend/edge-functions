@@ -1,8 +1,8 @@
 import { WithId } from 'npm/mongodb';
-import { Transform } from '../../common/transformer/types.d.ts';
-import { MediaEntity } from '../types.d.ts';
+import { Transform } from '../../common/transformer/types.ts';
+import { MediaEntity } from '../types.ts';
 import { idOf, Optional } from '../../common/mongo/index.ts';
-import { MediaDocument } from './types.d.ts';
+import { MediaDocument } from './types.ts';
 
 const map = (
   document: WithId<MediaDocument>,

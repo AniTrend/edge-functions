@@ -1,5 +1,5 @@
-import { Features } from '../../common/types/core.d.ts';
-import { ClientConfiguration } from '../transformer/types.d.ts';
+import { Features } from '../../common/types/core.ts';
+import { ClientConfiguration } from '../transformer/types.ts';
 import { LocalSource } from '../local/index.ts';
 import { transform } from '../transformer/index.ts';
 import { logger } from '../../common/core/index.ts';

@@ -1,4 +1,4 @@
-import { Features, Local } from './core.d.ts';
+import { Features, Local } from './core.ts';
 
 export type ContextHeader = {
   agent: string;

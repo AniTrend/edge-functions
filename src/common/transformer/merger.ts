@@ -1,4 +1,4 @@
-import { Transforms } from './types.d.ts';
+import { Transforms } from './types.ts';
 
 export const mergeTransformers = <S, T>(
   ...transformers: Transforms<S, T>[]

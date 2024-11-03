@@ -1,4 +1,4 @@
-import { RCF822Date } from '../types/core.d.ts';
+import { RCF822Date } from '../types/core.ts';
 import { env } from './env.ts';
 
 export const isOlderThan = (

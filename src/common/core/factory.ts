@@ -1,5 +1,5 @@
 import { Application, Router } from 'x/oak';
-import { FactoryOptions } from '../types/options.d.ts';
+import { FactoryOptions } from '../types/options.ts';
 import state from './setup.ts';
 import timing from '../middleware/timing.ts';
 import error from '../middleware/error.ts';

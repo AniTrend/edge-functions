@@ -1,6 +1,6 @@
 import { between } from 'x/optic';
 import { logger } from '../core/logger.ts';
-import type { AppContext } from '../types/core.d.ts';
+import type { AppContext } from '../types/core.ts';
 import { env } from '../core/env.ts';
 
 export default async (

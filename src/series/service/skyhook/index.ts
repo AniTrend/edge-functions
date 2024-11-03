@@ -1,7 +1,7 @@
 import { logger } from '../../../common/core/logger.ts';
 import { transform } from './transformer/index.ts';
 import { getShowByTvdb } from './remote/index.ts';
-import { SkyhookShow } from './types.d.ts';
+import { SkyhookShow } from './types.ts';
 
 export const getSkyhookShow = async (
   tmdb?: number,

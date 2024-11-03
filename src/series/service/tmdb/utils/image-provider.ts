@@ -1,4 +1,4 @@
-import { Configuration, Image } from '../remote/types.d.ts';
+import { Configuration, Image } from '../remote/types.ts';
 
 const IMAGE_SIZE_PATTERN = /w(\d+)$/;
 

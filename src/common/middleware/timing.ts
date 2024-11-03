@@ -1,4 +1,4 @@
-import type { AppContext } from '../types/core.d.ts';
+import type { AppContext } from '../types/core.ts';
 
 export default async (
   { response }: AppContext,

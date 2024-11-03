@@ -1,4 +1,4 @@
-import { RCF822Date } from '../../../common/types/core.d.ts';
+import { RCF822Date } from '../../../common/types/core.ts';
 import { TmdbDepartment } from './enums.ts';
 
 export interface TmdbGenre {

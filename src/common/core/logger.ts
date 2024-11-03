@@ -3,7 +3,7 @@ import { ConsoleStream, Level, Logger } from 'x/optic';
 import { TokenReplacer } from 'x/optic/formatters';
 import { LogtailStream } from '../logger/logtail.ts';
 import { env } from './env.ts';
-import { MinLogLevel } from '../logger/types.d.ts';
+import { MinLogLevel } from '../logger/types.ts';
 
 const consoleLogger = new ConsoleStream()
   .withFormat(

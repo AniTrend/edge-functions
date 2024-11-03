@@ -1,6 +1,6 @@
 import { HTTPMethods, Status } from 'x/oak';
 import { logger } from '../core/logger.ts';
-import type { AppContext, ErrorResponse } from '../types/core.d.ts';
+import type { AppContext, ErrorResponse } from '../types/core.ts';
 
 const bodyTypes: HTTPMethods[] = [
   'PATCH',

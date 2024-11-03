@@ -5,11 +5,11 @@ import {
   FindOneAndReplaceOptions,
 } from 'npm/mongodb';
 import { logger } from '../../common/core/logger.ts';
-import { IResponse } from '../../common/types/response.d.ts';
-import { MediaWithSeason } from '../types.d.ts';
+import { IResponse } from '../../common/types/response.ts';
+import { MediaWithSeason } from '../types.ts';
 import { transform } from './transformer.ts';
-import { MediaDocument } from './types.d.ts';
-import { MediaParamId } from './types.d.ts';
+import { MediaDocument } from './types.ts';
+import { MediaParamId } from './types.ts';
 import { FindOptions } from 'npm/mongodb';
 import { between } from 'x/optic';
 

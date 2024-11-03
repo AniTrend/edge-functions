@@ -1,4 +1,4 @@
-import { State } from '../types/state.d.ts';
+import { State } from '../types/state.ts';
 import { env } from './env.ts';
 import { GrowthBook } from 'growthbook';
 import { logger } from './logger.ts';

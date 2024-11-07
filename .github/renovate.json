@@ -1,13 +1,15 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "config:recommended"
   ],
   "addLabels": [
     ":dagger: dependencies"
   ],
   "branchPrefix": "dependencies/",
-  "reviewers": ["wax911"],
+  "reviewers": [
+    "wax911"
+  ],
   "baseBranches": [
     "dev"
   ],

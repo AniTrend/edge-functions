@@ -10,5 +10,8 @@
   "reviewers": ["wax911"],
   "baseBranches": [
     "dev"
-  ]
+  ],
+  "automerge": true,
+  "automergeType": "pr",
+  "automergeStrategy": "rebase"
 }

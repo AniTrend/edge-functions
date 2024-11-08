@@ -1,4 +1,4 @@
-import { assertEquals } from 'std/testing/asserts';
+import { assertEquals } from 'std/assert';
 import { describe, it } from 'std/testing/bdd';
 import { isOlderThan, pagination } from './utils.ts';
 

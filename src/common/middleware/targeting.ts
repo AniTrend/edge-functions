@@ -1,4 +1,4 @@
-import { between } from 'x/optic';
+import { between } from 'optic';
 import { State } from '../types/state.ts';
 import { UserAgent } from 'std/http';
 import { logger } from '../core/logger.ts';

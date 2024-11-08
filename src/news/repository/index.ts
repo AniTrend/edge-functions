@@ -5,10 +5,10 @@ import { IPaging } from '../../common/types/paging.ts';
 import { transform } from '../transformer.ts';
 import { currentDate, isOlderThan } from '../../common/core/utils.ts';
 import { IResponse } from '../../common/types/response.ts';
-import { parse } from 'x/xml';
+import { parse } from 'xml';
 import { logger } from '../../common/core/logger.ts';
 import { NewsId } from '../local/types.ts';
-import { between } from 'x/optic/profiler';
+import { between } from 'optic';
 
 export default class NewsRepository {
   constructor(

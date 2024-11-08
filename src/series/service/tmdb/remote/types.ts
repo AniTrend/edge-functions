@@ -60,7 +60,7 @@ export interface Image {
   width: number;
 }
 
-interface Images {
+export interface Images {
   backdrops: Image[];
   logos: Image[];
   posters: Image[];

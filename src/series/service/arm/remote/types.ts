@@ -1,13 +1,13 @@
-interface ArmModel {
-  anidb: number | null;
-  anilist: number | null;
-  'anime-planet': string | null;
-  anisearch: number | null;
-  imdb: string | null;
-  kitsu: number | null;
-  livechart: number | null;
-  'notify-moe': string | null;
-  themoviedb: number | null;
-  thetvdb: number | null;
-  myanimelist: number | null;
+export interface ArmModel {
+  anidb?: number;
+  anilist?: number;
+  'anime-planet'?: string;
+  anisearch?: number;
+  imdb: string;
+  kitsu?: number;
+  livechart?: number;
+  'notify-moe'?: string;
+  themoviedb?: number;
+  thetvdb?: number;
+  myanimelist?: number;
 }

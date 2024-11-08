@@ -1,4 +1,4 @@
-import { Router } from 'x/oak';
+import { Router } from 'oak';
 import factory from './common/core/factory.ts';
 import { port } from './common/core/utils.ts';
 import { AppContext } from './common/types/core.ts';

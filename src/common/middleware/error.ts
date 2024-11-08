@@ -1,4 +1,4 @@
-import { isHttpError, Status, STATUS_TEXT } from 'x/oak';
+import { isHttpError, Status, STATUS_TEXT } from 'oak';
 import { logger } from '../core/logger.ts';
 import type { ErrorResponse } from '../types/core.ts';
 import type { AppContext } from '../types/core.ts';

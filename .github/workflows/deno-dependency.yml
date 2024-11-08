@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: denoland/setup-deno@v1
+      - uses: denoland/setup-deno@v2
       - name: Update dependencies
         run: |
           deno run -A https://deno.land/x/udd/main.ts src/import_map.json
@@ -37,7 +37,7 @@ jobs:
           state: "pending"
           sha: ${{ steps.commit.outputs.sha }}
       - name: Setup Deno
-        uses: denoland/setup-deno@v1
+        uses: denoland/setup-deno@v2
       - name: Config properties file
         run: |
           cp .env.defaults .env

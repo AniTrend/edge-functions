@@ -1,4 +1,4 @@
-import { Application, Router } from 'x/oak';
+import { Application, Router } from 'oak';
 import { FactoryOptions } from '../types/options.ts';
 import state from './setup.ts';
 import timing from '../middleware/timing.ts';
@@ -7,7 +7,7 @@ import growth from '../middleware/growth.ts';
 import header from '../middleware/header.ts';
 import targeting from '../middleware/targeting.ts';
 import { logger } from './logger.ts';
-import { between } from 'x/optic';
+import { between } from 'optic';
 
 const app = new Application({
   state,

@@ -11,7 +11,7 @@ import { transform } from './transformer.ts';
 import { MediaDocument } from './types.ts';
 import { MediaParamId } from './types.ts';
 import { FindOptions } from 'npm/mongodb';
-import { between } from 'x/optic';
+import { between } from 'optic';
 
 export default class LocalSource {
   constructor(

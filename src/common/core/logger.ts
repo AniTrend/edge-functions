@@ -1,6 +1,6 @@
-import { SummaryMeasureFormatter } from 'x/optic/profiler';
-import { ConsoleStream, Level, Logger } from 'x/optic';
-import { TokenReplacer } from 'x/optic/formatters';
+import { SummaryMeasureFormatter } from 'optic/profileMeasure';
+import { ConsoleStream, Level, Logger } from 'optic';
+import { TokenReplacer } from 'optic/formatters';
 import { LogtailStream } from '../logger/logtail.ts';
 import { env } from './env.ts';
 import { MinLogLevel } from '../logger/types.ts';
@@ -41,7 +41,6 @@ const logger = new Logger()
 logger.profilingConfig()
   .enabled(env<boolean>('OPTIC_TRACING'))
   .captureMemory(true)
-  .captureOps(true)
   .withLogLevel(Level.Info)
   .withFormatter(new SummaryMeasureFormatter());
 

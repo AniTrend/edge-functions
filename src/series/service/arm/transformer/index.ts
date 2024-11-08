@@ -1,8 +1,8 @@
-import { Model } from '../remote/types.ts';
+import { ArmModel } from '../remote/types.ts';
 import { AnimeRelationId } from '../types.ts';
 import { Transform } from '../../../../common/transformer/types.ts';
 
-export const transform: Transform<Model, AnimeRelationId> = (
+export const transform: Transform<ArmModel, AnimeRelationId> = (
   sourceData,
 ): AnimeRelationId => ({
   anidb: sourceData.anidb,

@@ -5,7 +5,7 @@ import { IResponse } from '../../common/types/response.ts';
 import { toDocument, toEntity } from '../mapper.ts';
 import { News } from '../types.ts';
 import { NewsDocument, NewsId } from './types.ts';
-import { between } from 'x/optic/profiler';
+import { between } from 'optic';
 import { projectionOf, sortOf } from '../../common/mongo/index.ts';
 
 export default class LocalSource {

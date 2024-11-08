@@ -2,7 +2,7 @@ import { State } from '../types/state.ts';
 import { env } from './env.ts';
 import { GrowthBook } from 'growthbook';
 import { logger } from './logger.ts';
-import { between } from 'x/optic';
+import { between } from 'optic';
 import _localSourceFactory from '../mongo/factory.ts';
 
 logger.mark('setup-start');

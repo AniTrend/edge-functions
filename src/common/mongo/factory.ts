@@ -1,6 +1,6 @@
 import { MongoClient } from 'npm/mongodb';
 import { logger } from '../core/logger.ts';
-import { between } from 'x/optic';
+import { between } from 'optic';
 import { env } from '../core/env.ts';
 import { Local } from '../types/core.ts';
 

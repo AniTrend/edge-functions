@@ -1,4 +1,4 @@
-import { Status } from 'x/oak';
+import { Status } from 'oak';
 import { AppContext, ErrorResponse } from '../common/types/core.ts';
 import LocalSource from './local/source.ts';
 import SeriesRepository from './repository/series.ts';

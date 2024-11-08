@@ -1,4 +1,4 @@
-import { HTTPMethods, Status } from 'x/oak';
+import { HTTPMethods, Status } from 'oak';
 import { logger } from '../core/logger.ts';
 import type { AppContext, ErrorResponse } from '../types/core.ts';
 

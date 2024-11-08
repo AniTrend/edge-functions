@@ -1,6 +1,6 @@
 import { Instant } from '../../../common/helpers/date.ts';
 
-interface SkyhookEpisode {
+export interface SkyhookEpisode {
   tvdbShowId: number;
   tvdbId: number;
   seasonNumber: number;

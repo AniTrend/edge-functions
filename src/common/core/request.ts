@@ -1,4 +1,4 @@
-import { between } from 'x/optic';
+import { between } from 'optic';
 import { logger } from './logger.ts';
 
 const sanitize = (uri: string): { safeUrl: string; host: string } => {

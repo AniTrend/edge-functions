@@ -1,52 +1,43 @@
-import { MongoClient } from 'npm/mongodb';
+import { MongoClient } from 'mongo';
 import { logger } from '../core/logger.ts';
 import { between } from 'optic';
 import { env } from '../core/env.ts';
 import { Local } from '../types/core.ts';
 
 class LocalSourceFactory {
-  constructor(private readonly client: MongoClient) {
-    logger.mark('mongo_connection_start');
-    client.on('timeout', () => {
-      logger.warn(
-        'common.mongo.factory:LocalSourceFactory: Connection timed out',
-      );
-    });
-  }
+  constructor(private readonly client: MongoClient) {}
 
   connect = async (): Promise<Local> => {
-    return await this.client.connect()
+    logger.mark('mongo_connection_start');
+    return await this.client.connect(env<string>('MONGO_URL'))
       .then((client) => {
         logger.mark('mongo_connection_end');
         logger.measure(
           between('mongo_connection_start', 'mongo_connection_end'),
         );
-        return client.db();
+        return client;
       })
-      .catch((e) => {
+      .catch((e: unknown) => {
         logger.error('common.mongo.factory:connect:', e);
         return undefined;
       });
   };
 
-  disconnect = async () => {
+  disconnect = () => {
     logger.mark('mongo_close_start');
-    await this.client.close(true)
-      .then(() => {
-      }).catch((e) => {
-        logger.error('common.mongo.factory:disconnect:', e);
-      }).finally(() => {
-        logger.mark('mongo_close_end');
-        logger.measure(between('mongo_close_start', 'mongo_close_end'));
-      });
+    try {
+      this.client.close();
+    } catch (e) {
+      logger.error('common.mongo.factory:disconnect:', e);
+    } finally {
+      logger.mark('mongo_close_end');
+      logger.measure(between('mongo_close_start', 'mongo_close_end'));
+    }
   };
 }
 
 const _localSourceFactory = new LocalSourceFactory(
-  new MongoClient(env<string>('MONGO_URL'), {
-    connectTimeoutMS: 1000,
-    monitorCommands: true,
-  }),
+  new MongoClient(),
 );
 
 export default _localSourceFactory;

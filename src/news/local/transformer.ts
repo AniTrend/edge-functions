@@ -1,4 +1,4 @@
-import { Document } from 'npm/mongodb';
+import { Document } from 'mongo';
 import { Transform } from '../../common/transformer/types.ts';
 import { News } from '../types.ts';
 

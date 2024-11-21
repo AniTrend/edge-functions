@@ -1,4 +1,4 @@
-import { Document } from 'npm/mongodb';
+import { Document } from 'mongo';
 
 export interface NavigationConfig extends Document {
   criteria: string;

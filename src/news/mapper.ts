@@ -1,9 +1,8 @@
 import { News, NewsEntity } from './types.ts';
 import { NewsDocument } from './local/types.ts';
-import { OptionalId, WithId } from 'npm/mongodb';
 import { idOf } from '../common/mongo/index.ts';
 
-export const toEntity = (data: WithId<NewsDocument>): NewsEntity => {
+export const toEntity = (data: NewsDocument): NewsEntity => {
   return {
     id: idOf(data._id),
     slug: data.slug,
@@ -18,7 +17,7 @@ export const toEntity = (data: WithId<NewsDocument>): NewsEntity => {
   };
 };
 
-export const toDocument = (data: News): OptionalId<NewsDocument> => {
+export const toDocument = (data: News): NewsDocument => {
   return {
     slug: data.slug,
     title: data.title,

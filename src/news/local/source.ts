@@ -1,4 +1,4 @@
-import { Collection, Filter, FindOptions, ObjectId, WithId } from 'npm/mongodb';
+import { Collection, Filter, FindOptions, ObjectId } from 'mongo';
 import { logger } from '../../common/core/logger.ts';
 import { IPaging } from '../../common/types/paging.ts';
 import { IResponse } from '../../common/types/response.ts';
@@ -42,7 +42,7 @@ export default class LocalSource {
     const filter: Filter<NewsDocument> = {
       id: { $exists: true },
     };
-    const options: FindOptions<WithId<NewsDocument>> = {
+    const options: FindOptions = {
       projection: projectionOf<NewsDocument>({ published_on: 1 }),
       sort: sortOf<NewsDocument>({ published_on: 'desc' }),
     };
@@ -76,7 +76,7 @@ export default class LocalSource {
         _id: { $gt: new ObjectId(id.cursor) },
       }
       : {};
-    const options: FindOptions<WithId<NewsDocument>> = {
+    const options: FindOptions = {
       sort: sortOf<NewsDocument>({ published_on: 'desc' }),
       limit: 25,
     };

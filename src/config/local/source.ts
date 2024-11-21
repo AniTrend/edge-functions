@@ -1,4 +1,4 @@
-import { Collection, WithId } from 'npm/mongodb';
+import { Collection } from 'mongo';
 import { logger } from '../../common/core/logger.ts';
 import { ConfigDocument } from './types.ts';
 import { Optional } from '../../common/mongo/types.ts';
@@ -8,7 +8,7 @@ export class LocalSource {
     private readonly collection?: Collection<ConfigDocument>,
   ) {}
 
-  getConfig = async (): Promise<Optional<WithId<ConfigDocument>>> => {
+  getConfig = async (): Promise<Optional<ConfigDocument>> => {
     const config = await this.collection?.findOne()
       ?.catch((e) => {
         logger.error(

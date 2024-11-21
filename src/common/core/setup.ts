@@ -55,7 +55,7 @@ const onTerminationRequest = (): void => {
   logger.debug(
     'common.core.setup:onTerminationRequest: OS dispatched signal',
   );
-  const token = setTimeout(async () => await _localSourceFactory.disconnect());
+  const token = setTimeout(() => _localSourceFactory.disconnect());
   logger.debug(
     'common.core.setup:onTerminationRequest: Attempting to exit Deno process',
   );

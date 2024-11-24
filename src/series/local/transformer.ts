@@ -1,11 +1,10 @@
-import { WithId } from 'npm/mongodb';
 import { Transform } from '../../common/transformer/types.ts';
 import { MediaEntity } from '../types.ts';
 import { idOf, Optional } from '../../common/mongo/index.ts';
 import { MediaDocument } from './types.ts';
 
 const map = (
-  document: WithId<MediaDocument>,
+  document: MediaDocument,
 ): Optional<MediaEntity> => {
   return {
     id: idOf(document._id),
@@ -33,6 +32,6 @@ const map = (
 };
 
 export const transform: Transform<
-  Optional<WithId<MediaDocument>>,
+  Optional<MediaDocument>,
   Optional<MediaEntity>
 > = (sourceData) => sourceData ? map(sourceData) : undefined;

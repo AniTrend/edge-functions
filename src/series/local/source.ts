@@ -2,15 +2,15 @@ import {
   Collection,
   Document,
   Filter,
-  FindOneAndReplaceOptions,
-} from 'npm/mongodb';
+  FindAndModifyOptions,
+  FindOptions,
+} from 'mongo';
 import { logger } from '../../common/core/logger.ts';
 import { IResponse } from '../../common/types/response.ts';
 import { MediaWithSeason } from '../types.ts';
 import { transform } from './transformer.ts';
 import { MediaDocument } from './types.ts';
 import { MediaParamId } from './types.ts';
-import { FindOptions } from 'npm/mongodb';
 import { between } from 'optic';
 
 export default class LocalSource {
@@ -22,7 +22,7 @@ export default class LocalSource {
     const filter: Filter<Document> = {
       'mediaId.anilist': mediaId.anilist,
     };
-    const options: FindOptions<MediaDocument> = {};
+    const options: FindOptions = {};
     logger.mark('series_source_get_start');
     const document = await this.collection
       ?.findOne(filter, options)
@@ -56,15 +56,16 @@ export default class LocalSource {
     const filter: Filter<Document> = {
       'mediaId.anilist': media.mediaId.anilist,
     };
-    const options: FindOneAndReplaceOptions = {
-      upsert: true,
-    };
     const replacement: MediaDocument = {
       ...media,
     };
+    const options: FindAndModifyOptions = {
+      upsert: true,
+      update: replacement,
+    };
 
     logger.mark('series_source_save_start');
-    await this.collection?.findOneAndReplace(filter, replacement, options)
+    await this.collection?.findAndModify(filter, options)
       ?.then((result) => {
         logger.debug('seriese.local.source:save: Saved document', result?._id);
         logger.mark('series_source_save_end');

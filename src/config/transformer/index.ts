@@ -1,4 +1,3 @@
-import { WithId } from 'npm/mongodb';
 import {
   getPlatformSource,
   isAnalyticsEnabled,
@@ -19,7 +18,7 @@ const toImageUrl = (image: string, source?: PlatformSource): string => {
 
 export const transform: Transform<
   {
-    document: WithId<ConfigDocument>;
+    document: ConfigDocument;
     features: Features;
   },
   ClientConfiguration

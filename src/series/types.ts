@@ -75,36 +75,38 @@ export type SeriesImage = {
 };
 
 export interface SeriesEpisodeCrew {
-  job: string | null;
-  department: string | null;
+  job?: string;
+  department?: string;
   creditId: string;
-  adult: boolean | null;
+  adult?: boolean;
   id: number;
   knownFor: string;
   name: string;
   originalName: string;
   popularity: number;
-  image: string | null;
-  character: string | null;
-  order: number | null;
+  image?: string;
+  character?: string;
+  order?: number;
 }
 
 export type SeriesEpisode = {
+  id: number;
   tvdbShowId: number;
   tvdbId: number;
-  tmdbId: number;
   seasonNumber: number;
   episodeNumber: number;
-  absoluteEpisodeNumber: number | null;
-  airedBeforeSeasonNumber: number | null;
-  airedBeforeEpisodeNumber: number | null;
-  title: string | null;
-  airDate: Instant;
-  runtime: number | null;
-  overview: string | null;
-  image: string | null;
-  name: string;
-  poster: string | null;
+  absoluteEpisodeNumber?: number;
+  airedBeforeSeasonNumber?: number;
+  airedBeforeEpisodeNumber?: number;
+  airedAfterSeasonNumber?: number;
+  airedAfterEpisodeNumber?: number;
+  title?: string;
+  airDate: Date;
+  runtime?: number;
+  overview?: string;
+  image?: string;
+  name?: string;
+  poster?: string;
   crew: SeriesEpisodeCrew[];
   guests: SeriesEpisodeCrew[];
 };
@@ -116,7 +118,7 @@ export type SeriesSeason = {
   name: string;
   overview: string;
   number: number;
-  cover: string | null;
+  cover?: string;
   image: SeriesImage;
   episodes: SeriesEpisode[];
 };
@@ -124,14 +126,14 @@ export type SeriesSeason = {
 export type SeriesTrailer = {
   id: string;
   site: string;
-  thumbnail: string | null;
+  thumbnail?: string;
 };
 
 export type SeriesCoverImage = {
-  extraLarge: string | null;
-  large: string | null;
-  medium: string | null;
-  color: string | null;
+  extraLarge?: string;
+  large?: string;
+  medium?: string;
+  color?: string;
 };
 
 export interface Media {

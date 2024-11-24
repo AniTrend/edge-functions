@@ -1,4 +1,4 @@
-export interface AnimeRelationId {
+export type AnimeRelationId = {
   anidb?: number;
   anilist?: number;
   animePlanet?: string;
@@ -10,4 +10,4 @@ export interface AnimeRelationId {
   themoviedb?: number;
   thetvdb?: number;
   myanimelist?: number;
-}
+};

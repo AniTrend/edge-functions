@@ -24,10 +24,38 @@ export default class SeasonRepository {
   private mergeEpisodes = (
     tmdbEpisodes: TmdbEpisode[],
     skyhookEpisodes: SkyhookEpisode[],
-  ): MergedEpisode[] =>
-    zip(tmdbEpisodes, skyhookEpisodes).map((data) =>
-      deepmerge(data[0], data[1]) as MergedEpisode
-    );
+  ): MergedEpisode[] => {
+    const zipped = zip(tmdbEpisodes, skyhookEpisodes).map((
+      [tmdbEpisode, skyhookEpisode],
+    ) => ({
+      id: tmdbEpisode.id,
+      tvdbShowId: skyhookEpisode.tvdbShowId,
+      tvdbId: skyhookEpisode.tvdbId,
+      tmdbShowId: tmdbEpisode.show_id,
+      seasonNumber: skyhookEpisode.seasonNumber ?? tmdbEpisode.season_number,
+      episodeNumber: skyhookEpisode.episodeNumber ?? tmdbEpisode.episode_number,
+      absoluteEpisodeNumber: skyhookEpisode.absoluteEpisodeNumber,
+      airedBeforeSeasonNumber: skyhookEpisode.airedBeforeSeasonNumber,
+      airedBeforeEpisodeNumber: skyhookEpisode.airedBeforeEpisodeNumber,
+      airedAfterSeasonNumber: skyhookEpisode.airedAfterSeasonNumber,
+      airedAfterEpisodeNumber: skyhookEpisode.airedAfterEpisodeNumber,
+      title: skyhookEpisode.title,
+      airDate: skyhookEpisode.airDate ?? tmdbEpisode.air_date,
+      airDateUtc: skyhookEpisode.airDateUtc,
+      runtime: skyhookEpisode.runtime ?? tmdbEpisode.runtime ?? 0,
+      finaleType: skyhookEpisode.finaleType,
+      overview: skyhookEpisode.overview ?? tmdbEpisode.overview,
+      image: skyhookEpisode.image,
+      name: tmdbEpisode.name,
+      productionCode: tmdbEpisode.production_code,
+      stillPath: tmdbEpisode.still_path,
+      voteAverage: tmdbEpisode.vote_average,
+      voteCount: tmdbEpisode.vote_count,
+      crew: tmdbEpisode.crew,
+      guestStars: tmdbEpisode.guest_stars,
+    }));
+    return zipped;
+  };
 
   private mergeSeasons = (
     tmdbSeasons: TmdbSeason[],
@@ -38,18 +66,15 @@ export default class SeasonRepository {
       .map((data) => deepmerge(data[0], data[1]))
       .map((mergedSeason) => ({
         ...mergedSeason,
-        episodes: Array.isArray(mergedSeason?.episodes)
-          ? this.mergeEpisodes(mergedSeason!.episodes, skyhookEpisodes)
+        episodes: mergedSeason?.episodes
+          ? this.mergeEpisodes(
+            mergedSeason.episodes,
+            skyhookEpisodes.filter((episode) =>
+              episode.seasonNumber == mergedSeason.season_number
+            ),
+          )
           : [],
       })) as MergedSeason[];
-  };
-
-  private mergeSeasonWithAnimeIds = (
-    _mergedSeasons: MergedSeason[],
-    _relations: AnimeRelationId[],
-  ): MergedSeason[] => {
-    // find relationships between mergedSeason[x].tmdbId and relations[x].themoviedb
-    throw new Error('Not implemented');
   };
 
   getSeasons = async (

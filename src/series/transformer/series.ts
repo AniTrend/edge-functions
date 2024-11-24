@@ -186,20 +186,17 @@ const seriesTrailers = (notify?: NotifyAnime): SeriesTrailer[] =>
   notify?.trailers?.map((trailer) => ({
     id: trailer.id,
     site: trailer.site,
-    thumbnail: trailer.thumbnail ?? null,
+    thumbnail: trailer.thumbnail,
   })) ?? [];
 
 const seriesCover = (
   notify?: NotifyAnime,
   jikan?: Jikan,
 ): SeriesCoverImage => ({
-  color: notify?.poster?.color ?? null,
-  extraLarge: jikan?.images?.jpg?.large_image_url ??
-    notify?.poster?.large ?? null,
-  large: jikan?.images?.jpg?.large_image_url ?? notify?.poster?.large ??
-    null,
-  medium: jikan?.images?.jpg?.small_image_url ?? notify?.poster?.large ??
-    null,
+  color: notify?.poster?.color,
+  extraLarge: jikan?.images?.jpg?.large_image_url ?? notify?.poster?.large,
+  large: jikan?.images?.jpg?.large_image_url ?? notify?.poster?.large,
+  medium: jikan?.images?.jpg?.small_image_url ?? notify?.poster?.large,
 });
 
 export const seriesTransform = (

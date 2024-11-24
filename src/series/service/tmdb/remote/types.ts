@@ -40,7 +40,7 @@ export interface Season {
   overview: string;
   poster_path: string | null;
   season_number: number;
-  episodes: Episode | null;
+  episodes: Episode[] | null;
   images: Images | null;
 }
 
@@ -89,7 +89,7 @@ interface Episode {
   name: string;
   overview: string;
   production_code: string;
-  runtime: string;
+  runtime: number;
   season_number: number;
   show_id: string;
   still_path: string;

@@ -41,7 +41,7 @@ export interface TmdbSeason {
   overview: string;
   poster_path: string | null;
   season_number: number;
-  episodes: TmdbEpisode | null;
+  episodes: TmdbEpisode[] | null;
   images: TmdbImages | null;
 }
 
@@ -90,7 +90,7 @@ export interface TmdbEpisode {
   name: string;
   overview: string;
   production_code: string;
-  runtime: string;
+  runtime: number;
   season_number: number;
   show_id: string;
   still_path: string;

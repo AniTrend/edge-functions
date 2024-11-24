@@ -1,9 +1,10 @@
 interface ActorModel {
   name: string;
   character: string;
+  image?: string;
 }
 
-interface EpisodeModel {
+export interface EpisodeModel {
   tvdbShowId: number;
   tvdbId: number;
   seasonNumber: number;
@@ -11,16 +12,19 @@ interface EpisodeModel {
   absoluteEpisodeNumber?: number;
   airedBeforeSeasonNumber?: number;
   airedBeforeEpisodeNumber?: number;
+  airedAfterSeasonNumber?: number;
+  airedAfterEpisodeNumber?: number;
   title?: string;
   airDate: Date;
   airDateUtc: Date;
   runtime?: number;
+  finaleType?: string | 'season';
   overview?: string;
   image?: string;
 }
 
 interface ImageModel {
-  coverType: string | 'Banner' | 'Poster' | 'Fanart';
+  coverType: string | 'Banner' | 'Poster' | 'Fanart' | 'Clearlogo';
   url: string;
 }
 
@@ -35,14 +39,25 @@ interface TimeOfDayModel {
   minutes: number;
 }
 
-export interface SkyhookModel {
+interface RatingModel {
+  count: number,
+  value: string
+}
+
+interface AlternativeTitlesModel {
+  title: string
+}
+
+export type SkyhookModel = {
   tvdbId: number;
   title: string;
   overview: string;
   slug: string;
+  originalCountry: string;
   originalLanguage: string;
   language: string;
   firstAired: Date;
+  lastAired: Date;
   tvMazeId: number;
   lastUpdated: Date;
   status: string;
@@ -50,9 +65,11 @@ export interface SkyhookModel {
   timeOfDay: TimeOfDayModel;
   originalNetwork: string;
   network: string;
-  imdbId: string;
   genres: string[];
   contentRating: string;
+  rating?: RatingModel;
+  alternativeTitles?: AlternativeTitlesModel;
+  imdbId: string;
   actors: ActorModel[];
   images: ImageModel[];
   seasons: SeasonModel[];

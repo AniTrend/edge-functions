@@ -19,11 +19,11 @@ const transformImage = (
     height: data.height,
     width: data.width,
     url: provider.getUrl(data, imageType),
-  }));
+  })) ?? [];
 
 const transformCrew = (crew: TmdbCrew): SeriesEpisodeCrew => ({
-  job: crew.job ?? null,
-  department: crew.department ?? null,
+  job: crew.job,
+  department: crew.department,
   creditId: crew.credit_id,
   adult: crew.adult,
   id: crew.id,
@@ -32,30 +32,30 @@ const transformCrew = (crew: TmdbCrew): SeriesEpisodeCrew => ({
   originalName: crew.original_name,
   popularity: crew.popularity,
   image: provider.getImageUrl('original', crew.profile_path),
-  character: crew.character ?? null,
-  order: crew.order ?? null,
+  character: crew.character,
+  order: crew.order,
 });
 
 const transformEpisode = (episode: MergedEpisode): SeriesEpisode => ({
+  id: episode.id,
   tvdbShowId: episode.tvdbShowId,
   tvdbId: episode.tvdbId,
-  tmdbId: episode.id,
   seasonNumber: episode.seasonNumber,
   episodeNumber: episode.episodeNumber,
-  absoluteEpisodeNumber: episode.absoluteEpisodeNumber ?? null,
-  airedBeforeSeasonNumber: episode.airedBeforeSeasonNumber ?? null,
-  airedBeforeEpisodeNumber: episode.airedBeforeEpisodeNumber ?? null,
-  title: episode.title ?? null,
-  airDate: episode.airDate,
-  runtime: Number(episode.runtime) ?? 0,
-  overview: episode.overview ?? null,
-  image: episode.image ?? null,
+  absoluteEpisodeNumber: episode.absoluteEpisodeNumber,
+  airedBeforeSeasonNumber: episode.airedBeforeSeasonNumber,
+  airedBeforeEpisodeNumber: episode.airedBeforeEpisodeNumber,
+  airedAfterSeasonNumber: episode.airedAfterSeasonNumber,
+  airedAfterEpisodeNumber: episode.airedAfterEpisodeNumber,
+  title: episode.title,
+  airDate: episode.airDateUtc,
+  runtime: episode.runtime,
+  overview: episode.overview,
+  image: episode.image,
   name: episode.name,
-  poster: episode.still_path != null
-    ? provider.getImageUrl('original', episode.still_path)
-    : null,
+  poster: provider.getImageUrl('original', episode.stillPath),
   crew: episode.crew.map(transformCrew),
-  guests: episode.guest_stars.map(transformCrew),
+  guests: episode.guestStars.map(transformCrew),
 });
 
 export const seasonTransformer = (

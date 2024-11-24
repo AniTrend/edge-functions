@@ -40,12 +40,12 @@ interface TimeOfDayModel {
 }
 
 interface RatingModel {
-  count: number,
-  value: string
+  count: number;
+  value: string;
 }
 
 interface AlternativeTitlesModel {
-  title: string
+  title: string;
 }
 
 export type SkyhookModel = {
@@ -74,4 +74,4 @@ export type SkyhookModel = {
   images: ImageModel[];
   seasons: SeasonModel[];
   episodes: EpisodeModel[];
-}
+};

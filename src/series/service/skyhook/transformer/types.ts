@@ -6,4 +6,4 @@ export type Show = {
   banner?: string;
   poster?: string;
   fanart?: string;
-}
+};

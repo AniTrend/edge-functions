@@ -1,6 +1,4 @@
 import { Router } from 'oak';
-import factory from './common/core/factory.ts';
-import { port } from './common/core/utils.ts';
 import { AppContext } from './common/types/core.ts';
 import { config } from './config/index.ts';
 import { news, newsWorker } from './news/index.ts';
@@ -28,6 +26,4 @@ router.get('/series', async (ctx: AppContext) => {
   await series(ctx);
 });
 
-await factory({
-  router: router,
-}).listen({ port });
+export default router;

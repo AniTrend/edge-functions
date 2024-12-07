@@ -2,7 +2,7 @@ import { Collection, Filter, FindOptions, ObjectId, WithId } from 'npm/mongodb';
 import { logger } from '../../common/core/logger.ts';
 import { IPaging } from '../../common/types/paging.ts';
 import { IResponse } from '../../common/types/response.ts';
-import { toDocument, toEntity } from '../mapper.ts';
+import { toDocument, toEntity } from '../mapper/index.ts';
 import { News } from '../types.ts';
 import { NewsDocument, NewsId } from './types.ts';
 import { between } from 'optic';

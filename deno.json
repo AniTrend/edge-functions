@@ -18,9 +18,9 @@
     "proseWrap": "preserve"
   },
   "tasks": {
-    "check": "deno check src/index.ts",
+    "check": "deno check src/server.ts",
     "test": "deno test --allow-read --allow-env --allow-net",
-    "start": "deno run --allow-read --allow-env --allow-net --allow-sys ./src/index.ts",
+    "start": "deno run --allow-read --allow-env --allow-net --allow-sys ./src/server.ts",
     "check-deps": "deno run -A jsr:@check/deps"
   }
 }

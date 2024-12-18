@@ -11,6 +11,6 @@
     "growthbook": "jsr:@growthbook/growthbook@1.2.2",
     "xml": "jsr:@libs/xml@6.0.1",
     "npm/logtail": "npm:@logtail/node@0.5.2",
-    "npm/mongodb": "npm:mongodb@6.12.0-dev.20241212.sha.f6d7868f"
+    "npm/mongodb": "npm:mongodb@6.12.0"
   }
 }

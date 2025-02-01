@@ -40,6 +40,6 @@ const logger = new Logger()
 logger.profilingConfig()
   .enabled(env<boolean>('OPTIC_TRACING'))
   .captureMemory(true)
-  .withLogLevel(Level.Info)
+  .withLogLevel(Level.Info);
 
 export { logger };

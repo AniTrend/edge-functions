@@ -43,10 +43,7 @@ class LocalSourceFactory {
 }
 
 const _localSourceFactory = new LocalSourceFactory(
-  new MongoClient(env<string>('MONGO_URL'), {
-    connectTimeoutMS: 1000,
-    monitorCommands: true,
-  }),
+  new MongoClient(env<string>('MONGO_URL')),
 );
 
 export default _localSourceFactory;

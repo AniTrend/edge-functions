@@ -1,4 +1,3 @@
-import { SummaryMeasureFormatter } from 'optic/profileMeasure';
 import { ConsoleStream, Level, Logger } from 'optic';
 import { TokenReplacer } from 'optic/formatters';
 import { LogtailStream } from '../logger/logtail.ts';
@@ -42,6 +41,5 @@ logger.profilingConfig()
   .enabled(env<boolean>('OPTIC_TRACING'))
   .captureMemory(true)
   .withLogLevel(Level.Info)
-  .withFormatter(new SummaryMeasureFormatter());
 
 export { logger };

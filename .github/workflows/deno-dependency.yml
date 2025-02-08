@@ -3,7 +3,7 @@ name: deno-dependency
 on:
   workflow_dispatch:
   schedule:
-    - cron: "42 19 * * *"
+    - cron: "0 2 * * 5"
 
 jobs:
   update-dependencies:

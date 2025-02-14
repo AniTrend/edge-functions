@@ -1,4 +1,4 @@
-import { Collection, WithId } from 'npm/mongodb';
+import { Collection, WithId } from '@mongodb';
 import { logger } from '../../common/core/logger.ts';
 import { ConfigDocument } from './types.ts';
 import { Optional } from '../../common/mongo/types.ts';

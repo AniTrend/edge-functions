@@ -1,4 +1,4 @@
-import { loadSync } from 'std/dotenv';
+import { loadSync } from '@std/dotenv';
 
 try {
   loadSync({

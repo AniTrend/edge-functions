@@ -1,4 +1,4 @@
-import { Context, Middleware, Router, State } from 'oak';
+import { Context, Middleware, Router, State } from '@oak';
 
 type AS = Record<string, unknown>;
 

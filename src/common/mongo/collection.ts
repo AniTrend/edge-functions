@@ -1,4 +1,4 @@
-import { Document } from 'npm/mongodb';
+import { Document } from '@mongodb';
 import { Local } from '../types/core.ts';
 
 export const collection = <T extends Document>(

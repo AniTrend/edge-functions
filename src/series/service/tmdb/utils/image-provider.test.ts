@@ -1,5 +1,5 @@
-import { assertEquals } from 'std/assert';
-import { describe, it } from 'std/testing/bdd';
+import { assertEquals } from '@std/assert';
+import { describe, it } from '@std/testing/bdd';
 import { ImageProvider, ImageProviderType } from './image-provider.ts';
 import { Image } from '../remote/types.ts';
 

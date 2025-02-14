@@ -1,5 +1,5 @@
-import { assertEquals } from 'std/assert';
-import { describe, it } from 'std/testing/bdd';
+import { assertEquals } from '@std/assert';
+import { describe, it } from '@std/testing/bdd';
 import { isOlderThan, pagination } from './utils.ts';
 
 describe('utilities test', () => {

@@ -1,4 +1,4 @@
-import { WithId } from 'npm/mongodb';
+import { WithId } from '@mongodb';
 import { Transform } from '../../common/transformer/types.ts';
 import { MediaEntity } from '../types.ts';
 import { idOf, Optional } from '../../common/mongo/index.ts';

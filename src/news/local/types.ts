@@ -1,4 +1,4 @@
-import { Document } from 'npm/mongodb';
+import { Document } from '@mongodb';
 import { EntityCursor } from '../../common/mongo/types.ts';
 
 export interface NewsDocument extends Document {

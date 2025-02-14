@@ -1,6 +1,6 @@
-import { Logtail } from 'npm/logtail';
-import { TokenReplacer } from 'optic/formatters';
-import { BaseStream, Level, LogRecord } from 'optic';
+import { Logtail } from '@logtail';
+import { TokenReplacer } from '@optic/formatters';
+import { BaseStream, Level, LogRecord } from '@optic';
 
 export class LogtailStream extends BaseStream {
   private logtail: Logtail;

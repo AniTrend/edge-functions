@@ -1,6 +1,6 @@
 import { News, NewsEntity } from '../types.ts';
 import { NewsDocument } from '../local/types.ts';
-import { OptionalId, WithId } from 'npm/mongodb';
+import { OptionalId, WithId } from '@mongodb';
 import { idOf } from '../../common/mongo/index.ts';
 
 export const toEntity = (data: WithId<NewsDocument>): NewsEntity => {

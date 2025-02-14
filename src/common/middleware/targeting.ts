@@ -1,6 +1,6 @@
-import { between } from 'optic';
+import { between } from '@optic';
 import { State } from '../types/state.ts';
-import { UserAgent } from 'std/http';
+import { UserAgent } from '@std/http';
 import { logger } from '../core/logger.ts';
 import type { AppContext } from '../types/core.ts';
 

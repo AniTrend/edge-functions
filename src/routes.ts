@@ -1,4 +1,4 @@
-import { Router } from 'oak';
+import { Router } from '@oak';
 import { AppContext } from './common/types/core.ts';
 import { config } from './config/index.ts';
 import { news, newsWorker } from './news/index.ts';

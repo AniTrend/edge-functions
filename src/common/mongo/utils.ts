@@ -1,4 +1,4 @@
-import { Document, ObjectId, Sort } from 'npm/mongodb';
+import { Document, ObjectId, Sort } from '@mongodb';
 import { ProjectionOption, SortOption } from './types.ts';
 
 export const projectionOf = <T extends Document>(

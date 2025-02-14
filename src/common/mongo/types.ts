@@ -1,4 +1,4 @@
-import { Document, OptionalId, SortDirection } from 'npm/mongodb';
+import { Document, OptionalId, SortDirection } from '@mongodb';
 
 export type Optional<T extends Document> = T | undefined | null;
 

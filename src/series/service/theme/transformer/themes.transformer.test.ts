@@ -1,5 +1,5 @@
-import { assertEquals } from 'std/assert';
-import { describe, it } from 'std/testing/bdd';
+import { assertEquals } from '@std/assert';
+import { describe, it } from '@std/testing/bdd';
 import { ThemeModel } from '../remote/types.ts';
 import { transform } from './index.ts';
 import { Theme } from './types.ts';

@@ -1,7 +1,7 @@
 import type { AppContext } from '../common/types/core.ts';
 import { isNewsApiv2Enabled } from '../common/experiment/index.ts';
 import LocalSource from './local/news.local.source.ts';
-import { STATUS_CODE } from 'std/http';
+import { Status } from '@oak';
 import { collection } from '../common/mongo/index.ts';
 import { NewsRepository } from './repository/index.ts';
 
@@ -12,7 +12,7 @@ export const newsWorker = async ({ response, state }: AppContext) => {
   );
 
   await repository.sync();
-  response.status = STATUS_CODE.NoContent;
+  response.status = Status.NoContent;
 };
 
 export const news = async ({ response, state }: AppContext) => {

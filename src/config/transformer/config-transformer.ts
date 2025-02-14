@@ -1,4 +1,4 @@
-import { WithId } from 'npm/mongodb';
+import { WithId } from '@mongodb';
 import {
   getPlatformSource,
   isAnalyticsEnabled,

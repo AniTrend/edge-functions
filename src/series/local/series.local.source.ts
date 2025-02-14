@@ -3,15 +3,15 @@ import {
   Document,
   Filter,
   FindOneAndReplaceOptions,
-} from 'npm/mongodb';
+} from '@mongodb';
 import { logger } from '../../common/core/logger.ts';
 import { IResponse } from '../../common/types/response.ts';
 import { MediaWithSeason } from '../types.ts';
 import { transform } from './series.local.transformer.ts';
 import { MediaDocument } from './types.ts';
 import { MediaParamId } from './types.ts';
-import { FindOptions } from 'npm/mongodb';
-import { between } from 'optic';
+import { FindOptions } from '@mongodb';
+import { between } from '@optic';
 
 export default class LocalSource {
   constructor(

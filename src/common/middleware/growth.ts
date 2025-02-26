@@ -8,40 +8,44 @@ export default async (
   next: () => Promise<unknown>,
 ) => {
   logger.mark('load-features-start');
-  await state.features.init({
-    timeout: env<number>('GROWTH_TIME_OUT'),
-  })
-    .then((data) => {
-      if (data.error) {
-        logger.error(
-          'common.middleware.growth: GrowthBook init error',
-          data.error,
-        );
-      } else {
-        logger.info(
-          'common.middleware.growth: GrowthBook init complete',
-          data.source,
-        );
-      }
-      logger.mark('load-features-end');
-      logger.measure(between('load-features-start', 'load-features-end'));
-    })
-    .catch((e) => {
+  
+  try {
+    const { error, source } = await state.features.init({
+      timeout: env<number>('GROWTH_TIME_OUT'),
+    });
+
+    if (error) {
       logger.error(
-        'common.middleware.growth: Failed to load features from GrowthBook',
-        e,
+        'common.middleware.growth: GrowthBook init error',
+        error,
       );
-    })
-    .finally(async () => {
-      await next();
-    })
-    .then(() => {
+    } else {
+      logger.info(
+        'common.middleware.growth: GrowthBook init complete',
+        source,
+      );
+    }
+  } catch (e) {
+    logger.error(
+      'common.middleware.growth: Failed to load features from GrowthBook',
+      e,
+    );
+  } finally {
+    logger.mark('load-features-end');
+    logger.measure(between('load-features-start', 'load-features-end'));
+  }
+
+  try {
+    await next();
+  } finally {
+    try {
       logger.mark('destory-growth-start');
       state.features.destroy();
+    } catch (e) {
+      logger.error('common.middleware.growth: Failed to destroy GrowthBook', e);
+    } finally {
       logger.mark('destory-growth-end');
       logger.measure(between('destory-growth-start', 'destory-growth-end'));
-    })
-    .catch((e) => {
-      logger.error('common.middleware.growth: Failed to destory GrowthBook', e);
-    });
+    }
+  }
 };

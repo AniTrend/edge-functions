@@ -8,7 +8,7 @@ export default async (
   next: () => Promise<unknown>,
 ) => {
   logger.mark('load-features-start');
-  
+
   try {
     const { error, source } = await state.features.init({
       timeout: env<number>('GROWTH_TIME_OUT'),

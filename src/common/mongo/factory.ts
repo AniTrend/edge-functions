@@ -31,14 +31,14 @@ class LocalSourceFactory {
 
   disconnect = async () => {
     logger.mark('mongo_close_start');
-    await this.client.close(true)
-      .then(() => {
-      }).catch((e) => {
-        logger.error('common.mongo.factory:disconnect:', e);
-      }).finally(() => {
-        logger.mark('mongo_close_end');
-        logger.measure(between('mongo_close_start', 'mongo_close_end'));
-      });
+    try {
+      await this.client.close(true);
+    } catch (e) {
+      logger.error('common.mongo.factory:disconnect:', e);
+    } finally {
+      logger.mark('mongo_close_end');
+      logger.measure(between('mongo_close_start', 'mongo_close_end'));
+    }
   };
 }
 
